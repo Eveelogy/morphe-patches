@@ -23,26 +23,27 @@ val renameGboardPatch = resourcePatch(
     execute {
         val appName = customName ?: "Gboard (Morphe)"
 
-        val manifestDoc = document("AndroidManifest.xml")
-        val appElements = manifestDoc.getElementsByTagName("application")
-        if (appElements.length > 0) {
-            val appElement = appElements.item(0) as? Element
-            appElement?.setAttribute("android:label", appName)
-        }
-
-        val serviceNodes = manifestDoc.getElementsByTagName("service")
-        for (i in 0 until serviceNodes.length) {
-            val sNode = serviceNodes.item(i) as? Element
-            if (sNode?.getAttribute("android:name") == "com.android.inputmethod.latin.LatinIME") {
-                sNode.setAttribute("android:label", appName)
+        document("AndroidManifest.xml").use { manifestDoc ->
+            val appElements = manifestDoc.getElementsByTagName("application")
+            if (appElements.length > 0) {
+                val appElement = appElements.item(0) as? Element
+                appElement?.setAttribute("android:label", appName)
             }
-        }
 
-        val activityNodes = manifestDoc.getElementsByTagName("activity")
-        for (i in 0 until activityNodes.length) {
-            val aNode = activityNodes.item(i) as? Element
-            if (aNode?.getAttribute("android:name")?.contains("LauncherActivity") == true) {
-                aNode.setAttribute("android:label", appName)
+            val serviceNodes = manifestDoc.getElementsByTagName("service")
+            for (i in 0 until serviceNodes.length) {
+                val sNode = serviceNodes.item(i) as? Element
+                if (sNode?.getAttribute("android:name") == "com.android.inputmethod.latin.LatinIME") {
+                    sNode.setAttribute("android:label", appName)
+                }
+            }
+
+            val activityNodes = manifestDoc.getElementsByTagName("activity")
+            for (i in 0 until activityNodes.length) {
+                val aNode = activityNodes.item(i) as? Element
+                if (aNode?.getAttribute("android:name")?.contains("LauncherActivity") == true) {
+                    aNode.setAttribute("android:label", appName)
+                }
             }
         }
     }
