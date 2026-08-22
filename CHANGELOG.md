@@ -1,3 +1,9 @@
+## [1.0.0-dev.3](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-08-22)
+
+### ✨ New Features
+
+* add Morphe Settings menu in Gboard settings ([d3b1caa](https://github.com/Eveelogy/morphe-patches/commit/d3b1caa23adea0f8520b6f4204470b295f5440f8))
+
 ## [1.0.0-dev.2](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-08-22)
 
 ### ✨ New Features
