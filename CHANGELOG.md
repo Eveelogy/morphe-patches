@@ -1,3 +1,9 @@
+## [1.0.0-dev.11](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* implement aB layout binding in MorpheSettingsFragment to prevent sub-menu crash ([79664e4](https://github.com/Eveelogy/morphe-patches/commit/79664e4bda2a43e5198cb0c7f4a3cf8aabe9b145))
+
 ## [1.0.0-dev.10](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-08-22)
 
 ### 🐛 Bug Fixes
