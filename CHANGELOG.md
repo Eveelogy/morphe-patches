@@ -1,3 +1,9 @@
+## [1.0.0-dev.4](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* properly close AndroidManifest document in rename patch to allow clone patch concurrency ([1eb3e14](https://github.com/Eveelogy/morphe-patches/commit/1eb3e140cfb2055650740fca658a72166706ccd0))
+
 ## [1.0.0-dev.3](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-08-22)
 
 ### ✨ New Features
