@@ -6,7 +6,7 @@ import app.evee.patches.gboard.shared.Constants.COMPATIBILITY_GBOARD
 @Suppress("unused")
 val settingsPatch = resourcePatch(
     name = "Morphe Settings",
-    description = "Adds a Morphe Settings category in Gboard settings to configure patch options.",
+    description = "Adds a dedicated Morphe Settings sub-menu in Gboard settings.",
     default = true
 ) {
     compatibleWith(COMPATIBILITY_GBOARD)
@@ -18,25 +18,17 @@ val settingsPatch = resourcePatch(
                     val root = doc.documentElement ?: return@forEach
 
                     val category = doc.createElement("androidx.preference.PreferenceCategory").apply {
-                        setAttribute("android:title", "Morphe Settings")
                         setAttribute("android:order", "999")
                     }
 
-                    val safeSearchPref = doc.createElement("androidx.preference.SwitchPreferenceCompat").apply {
-                        setAttribute("android:title", "Disable GIF SafeSearch")
-                        setAttribute("android:summary", "Allow unrestricted Tenor GIF search results")
-                        setAttribute("android:key", "disable_gif_safesearch")
-                        setAttribute("android:defaultValue", "true")
+                    val headerPref = doc.createElement("com.google.android.libraries.inputmethod.settings.widget.HeaderPreference").apply {
+                        setAttribute("android:title", "Morphe Settings")
+                        setAttribute("android:key", "morphe_settings")
+                        setAttribute("android:fragment", "app.evee.extension.gboard.MorpheSettingsFragment")
+                        setAttribute("android:persistent", "false")
+                        setAttribute("android:icon", "?attr/_0_resource_name_obfuscated_res_0x7f0401c1")
                     }
-                    category.appendChild(safeSearchPref)
-
-                    val memeSearchPref = doc.createElement("androidx.preference.SwitchPreferenceCompat").apply {
-                        setAttribute("android:title", "Meme Search & Maker")
-                        setAttribute("android:summary", "Replace emoticon tab with still image meme search & maker")
-                        setAttribute("android:key", "replace_emoticon_with_meme_search")
-                        setAttribute("android:defaultValue", "true")
-                    }
-                    category.appendChild(memeSearchPref)
+                    category.appendChild(headerPref)
 
                     root.appendChild(category)
                 }
