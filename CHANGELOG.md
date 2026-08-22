@@ -1,3 +1,9 @@
+## [1.0.0-dev.14](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.13...v1.0.0-dev.14) (2026-08-22)
+
+### ✨ New Features
+
+* implement full Imgflip meme search and on-device meme creator for emoticon keyboard ([d7822bc](https://github.com/Eveelogy/morphe-patches/commit/d7822bc440cbc618188d604d0b8bfaf3c9d8e59d))
+
 ## [1.0.0-dev.13](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.12...v1.0.0-dev.13) (2026-08-22)
 
 ### ✨ New Features
