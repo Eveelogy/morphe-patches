@@ -1,3 +1,9 @@
+## [1.0.0-dev.10](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.9...v1.0.0-dev.10) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* populate MorpheSettingsFragment preference hierarchy and restore robust SafeSearch init ([ec9d734](https://github.com/Eveelogy/morphe-patches/commit/ec9d73468aaa8f78c6abb1c43bd6c4ffabf611fc))
+
 ## [1.0.0-dev.9](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-08-22)
 
 ### 🐛 Bug Fixes

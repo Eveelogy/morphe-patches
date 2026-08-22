@@ -1,10 +1,10 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.9",
+  "version": "1.0.0-dev.10",
   "patches": [
     {
       "name": "Disable GIF SafeSearch",
-      "description": "Disables content filtering on Tenor GIF search in real-time.",
+      "description": "Disables content filtering on Tenor GIF search.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
