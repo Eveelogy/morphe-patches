@@ -1,3 +1,9 @@
+## [1.0.0-dev.7](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* inject Morphe Settings directly into settings XML resource for reliable native display ([93b1e6d](https://github.com/Eveelogy/morphe-patches/commit/93b1e6d692ed8e2bf6c5cad3a6dc726c7cd69ac7))
+
 ## [1.0.0-dev.6](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-08-22)
 
 ### 🐛 Bug Fixes
