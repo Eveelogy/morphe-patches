@@ -11,12 +11,3 @@ object TenorContentFilterFingerprint : Fingerprint(
         string("medium")
     )
 )
-
-object TenorRequestFilterFingerprint : Fingerprint(
-    name = "iH",
-    returnType = "Lvwd;",
-    filters = listOf(
-        string("contentfilter"),
-        string("media_filter")
-    )
-)
