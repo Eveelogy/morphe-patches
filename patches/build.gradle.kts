@@ -1,7 +1,6 @@
-group = "app.patches"
+group = "app.evee"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
         name = "Evee's Patches"
         description = "Patches originally made for personal use that I figured I could share."

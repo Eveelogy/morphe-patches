@@ -3,5 +3,10 @@ extension {
 }
 
 android {
-    namespace = "app.template.extension"
+    namespace = "app.evee.extension"
 }
+
+dependencies {
+    compileOnly("androidx.preference:preference:1.2.1")
+}
+
