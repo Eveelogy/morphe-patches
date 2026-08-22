@@ -1,3 +1,9 @@
+## [1.0.0-dev.12](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* safely clear template items and populate Morphe Settings with obfuscation fallback ([593a035](https://github.com/Eveelogy/morphe-patches/commit/593a035d777d2c574aa807dac42e96a81eb84012))
+
 ## [1.0.0-dev.11](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-08-22)
 
 ### 🐛 Bug Fixes

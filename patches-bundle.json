@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-22T17:09:21",
-  "description": "## [1.0.0-dev.11](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.10...v1.0.0-dev.11) (2026-08-22)\n\n### 🐛 Bug Fixes\n\n* implement aB layout binding in MorpheSettingsFragment to prevent sub-menu crash ([79664e4](https://github.com/Eveelogy/morphe-patches/commit/79664e4bda2a43e5198cb0c7f4a3cf8aabe9b145))",
-  "download_url": "https://github.com/Eveelogy/morphe-patches/releases/download/v1.0.0-dev.11/patches-1.0.0-dev.11.mpp",
+  "created_at": "2026-08-22T17:15:00",
+  "description": "## [1.0.0-dev.12](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-08-22)\n\n### 🐛 Bug Fixes\n\n* safely clear template items and populate Morphe Settings with obfuscation fallback ([593a035](https://github.com/Eveelogy/morphe-patches/commit/593a035d777d2c574aa807dac42e96a81eb84012))",
+  "download_url": "https://github.com/Eveelogy/morphe-patches/releases/download/v1.0.0-dev.12/patches-1.0.0-dev.12.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.11"
+  "version": "1.0.0-dev.12"
 }
