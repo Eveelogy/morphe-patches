@@ -1,16 +1,16 @@
-# 👋🧩 Morphe Patches template
-
-Template repository for Morphe Patches.
+# 🐦‍⬛ Evee's Patches
 
 ## ❓ About
 
-Patches for apps I like.
+Patches for apps/ideas I use, made for personal use that I figured I could share because maybe someone else would like them too. Made with heavy assistance from AI tools (mostly Antigravity/Gemini). I am not opposed to hearing about any ideas for new patches, or bug reports. However, I am by no means a professional developer, so please do not expect miracles. I literally only work on this in my free time, and when I have nothing better to do with it.
 
 <!-- TODO: Update this about section with a brief introduction/summary about this repo and what it offers. -->
 
 ### How to use these patches
 
-Click here to add these patches to Morphe: https://morphe.software/add-source?github=xyz-user/xyz-patches
+Click here to add these patches to Morphe: https://morphe.software/add-source?github=Eveelogy/morphe-patches
+
+Or you can go to the Patches sources section in the Morphe app and add the GitHub repository URL manually: https://github.com/Eveelogy/morphe-patches
 
 ## 🩹 Patches list
 
@@ -88,4 +88,4 @@ See the [Morphe documentation](https://github.com/MorpheApp/morphe-documentation
 
 ## 📜 License
 
-UserXYZ Patches are licensed under the [GNU General Public License v3.0](LICENSE)
+Evee's Patches are licensed under the [GNU General Public License v3.0](LICENSE)
