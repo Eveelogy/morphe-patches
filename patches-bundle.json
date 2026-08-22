@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-08-22T14:52:02",
-  "description": "## [1.0.0-dev.4](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-08-22)\n\n### 🐛 Bug Fixes\n\n* properly close AndroidManifest document in rename patch to allow clone patch concurrency ([1eb3e14](https://github.com/Eveelogy/morphe-patches/commit/1eb3e140cfb2055650740fca658a72166706ccd0))",
-  "download_url": "https://github.com/Eveelogy/morphe-patches/releases/download/v1.0.0-dev.4/patches-1.0.0-dev.4.mpp",
+  "created_at": "2026-08-22T15:09:33",
+  "description": "## [1.0.0-dev.5](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-08-22)\n\n### 🐛 Bug Fixes\n\n* robust preference injection for Morphe Settings and delegate emoticon tab directly to gif provider ([6bab329](https://github.com/Eveelogy/morphe-patches/commit/6bab3292f9d0df462a4deb23270144f88b115219))",
+  "download_url": "https://github.com/Eveelogy/morphe-patches/releases/download/v1.0.0-dev.5/patches-1.0.0-dev.5.mpp",
   "signature_download_url": "",
-  "version": "1.0.0-dev.4"
+  "version": "1.0.0-dev.5"
 }

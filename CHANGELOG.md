@@ -1,3 +1,9 @@
+## [1.0.0-dev.5](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* robust preference injection for Morphe Settings and delegate emoticon tab directly to gif provider ([6bab329](https://github.com/Eveelogy/morphe-patches/commit/6bab3292f9d0df462a4deb23270144f88b115219))
+
 ## [1.0.0-dev.4](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-08-22)
 
 ### 🐛 Bug Fixes
