@@ -1,3 +1,9 @@
+## [1.0.0-dev.9](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* use standard android drawable resource for Morphe Settings icon ([d6dd1d5](https://github.com/Eveelogy/morphe-patches/commit/d6dd1d5bacdd4e13dfc9a7d75c5104deca67e222))
+
 ## [1.0.0-dev.8](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-08-22)
 
 ### ✨ New Features
