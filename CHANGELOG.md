@@ -1,3 +1,9 @@
+## [1.0.0-dev.13](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.12...v1.0.0-dev.13) (2026-08-22)
+
+### ✨ New Features
+
+* route emoticon tab to static image / sticker keyboard and add MemeMaker engine ([66024d3](https://github.com/Eveelogy/morphe-patches/commit/66024d34fadfd443a0e47cea26df5c68d7c4dd14))
+
 ## [1.0.0-dev.12](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.11...v1.0.0-dev.12) (2026-08-22)
 
 ### 🐛 Bug Fixes
