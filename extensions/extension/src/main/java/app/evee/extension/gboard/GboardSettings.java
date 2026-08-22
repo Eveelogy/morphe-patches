@@ -3,9 +3,11 @@ package app.evee.extension.gboard;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.view.inputmethod.EditorInfo;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 @SuppressWarnings("unused")
@@ -67,6 +69,24 @@ public class GboardSettings {
         if (prefs != null) {
             prefs.edit().putBoolean(KEY_MEME_SEARCH, enabled).apply();
         }
+    }
+
+    public static Object getEmoticonNavbarItem(Object izqInstance, Context context, Object pquObj, EditorInfo editorInfo, boolean z) {
+        try {
+            Class<?> jjcClass = Class.forName("jjc");
+            Constructor<?> ctor = jjcClass.getDeclaredConstructor(int.class);
+            ctor.setAccessible(true);
+            Object jjcInstance = ctor.newInstance(1);
+
+            for (Method m : jjcClass.getDeclaredMethods()) {
+                if (m.getName().equals("a") && m.getParameterTypes().length == 4) {
+                    m.setAccessible(true);
+                    return m.invoke(jjcInstance, context, pquObj, editorInfo, z);
+                }
+            }
+        } catch (Throwable ignored) {
+        }
+        return null;
     }
 
     public static void addMorphePreferenceCategory(Object fragmentObj) {
