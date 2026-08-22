@@ -1,3 +1,9 @@
+## [1.0.0-dev.6](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-08-22)
+
+### 🐛 Bug Fixes
+
+* fix register verifier error in emoticon navbar hook preventing app startup crash ([90ca7df](https://github.com/Eveelogy/morphe-patches/commit/90ca7df5bc987ccdb36810b9dbbcbabe59a84a4f))
+
 ## [1.0.0-dev.5](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-08-22)
 
 ### 🐛 Bug Fixes
