@@ -1,15 +1,20 @@
 package app.evee.patches.gboard.memesearch
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.string
 
-object EmoticonNavbarFingerprint : Fingerprint(
-    definingClass = "Lizq;",
-    name = "a",
-    returnType = "Lvow;",
-    parameters = listOf(
-        "Landroid/content/Context;",
-        "Lpqu;",
-        "Landroid/view/inputmethod/EditorInfo;",
-        "Z"
+object EmoticonKeyboardViewCreatedFingerprint : Fingerprint(
+    name = "eL",
+    returnType = "V",
+    filters = listOf(
+        string("onKeyboardViewCreated() : Unexpected keyboard type %s.")
+    )
+)
+
+object EmoticonKeyboardActivateFingerprint : Fingerprint(
+    name = "e",
+    returnType = "V",
+    filters = listOf(
+        string("EmoticonKeyboardM2.onActivate")
     )
 )

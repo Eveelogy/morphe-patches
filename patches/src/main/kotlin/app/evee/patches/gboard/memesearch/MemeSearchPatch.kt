@@ -1,14 +1,14 @@
 package app.evee.patches.gboard.memesearch
 
-import app.morphe.patcher.extensions.InstructionExtensions.replaceInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import app.evee.patches.gboard.shared.Constants.COMPATIBILITY_GBOARD
-import app.evee.patches.gboard.shared.Constants.EXTENSION_CLASS_GBOARD
+import app.evee.patches.gboard.shared.Constants.EXTENSION_CLASS_MEME_VIEW
 
 @Suppress("unused")
 val memeSearchPatch = bytecodePatch(
-    name = "Replace emoticons with meme search",
-    description = "Replaces the emoticon keyboard tab with a meme and static image search panel.",
+    name = "Meme Search & Maker",
+    description = "Replaces the emoticon keyboard with an Imgflip meme search and on-device meme creator.",
     default = true
 ) {
     compatibleWith(COMPATIBILITY_GBOARD)
@@ -16,13 +16,19 @@ val memeSearchPatch = bytecodePatch(
     extendWith("extensions/extension.mpe")
 
     execute {
-        EmoticonNavbarFingerprint.method.replaceInstructions(
+        // 1. Hook onKeyboardViewCreated to attach MemeKeyboardView
+        EmoticonKeyboardViewCreatedFingerprint.method.addInstructions(
             0,
             """
-                invoke-static {p0, p1, p2, p3, p4}, $EXTENSION_CLASS_GBOARD->getEmoticonNavbarItem(Ljava/lang/Object;Landroid/content/Context;Ljava/lang/Object;Landroid/view/inputmethod/EditorInfo;Z)Ljava/lang/Object;
-                move-result-object p0
-                check-cast p0, Lvow;
-                return-object p0
+                invoke-static {p0, p1, p2}, $EXTENSION_CLASS_MEME_VIEW->onKeyboardViewCreated(Ljava/lang/Object;Landroid/view/View;Ljava/lang/Object;)V
+            """
+        )
+
+        // 2. Hook onActivate to refresh context and memes
+        EmoticonKeyboardActivateFingerprint.method.addInstructions(
+            0,
+            """
+                invoke-static {p0, p1, p2}, $EXTENSION_CLASS_MEME_VIEW->onActivate(Ljava/lang/Object;Landroid/view/inputmethod/EditorInfo;Ljava/lang/Object;)V
             """
         )
     }
