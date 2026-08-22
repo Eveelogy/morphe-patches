@@ -1,10 +1,10 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.7",
+  "version": "1.0.0-dev.8",
   "patches": [
     {
       "name": "Disable GIF SafeSearch",
-      "description": "Disables content filtering on Tenor GIF search.",
+      "description": "Disables content filtering on Tenor GIF search in real-time.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [
@@ -37,7 +37,7 @@
     },
     {
       "name": "Morphe Settings",
-      "description": "Adds a Morphe Settings category in Gboard settings to configure patch options.",
+      "description": "Adds a dedicated Morphe Settings sub-menu in Gboard settings.",
       "default": true,
       "dependencies": [],
       "compatiblePackages": [

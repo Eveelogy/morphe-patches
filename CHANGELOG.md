@@ -1,3 +1,9 @@
+## [1.0.0-dev.8](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2026-08-22)
+
+### ✨ New Features
+
+* add dedicated Morphe Settings sub-menu with real-time SafeSearch evaluation and restart button ([1d7927e](https://github.com/Eveelogy/morphe-patches/commit/1d7927e9f1139ef0f85ef9d04b747af79e8f9310))
+
 ## [1.0.0-dev.7](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2026-08-22)
 
 ### 🐛 Bug Fixes
