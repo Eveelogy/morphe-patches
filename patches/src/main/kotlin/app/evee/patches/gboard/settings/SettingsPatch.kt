@@ -26,7 +26,7 @@ val settingsPatch = resourcePatch(
                         setAttribute("android:key", "morphe_settings")
                         setAttribute("android:fragment", "app.evee.extension.gboard.MorpheSettingsFragment")
                         setAttribute("android:persistent", "false")
-                        setAttribute("android:icon", "?attr/_0_resource_name_obfuscated_res_0x7f0401c1")
+                        setAttribute("android:icon", "@android:drawable/ic_menu_preferences")
                     }
                     category.appendChild(headerPref)
 
