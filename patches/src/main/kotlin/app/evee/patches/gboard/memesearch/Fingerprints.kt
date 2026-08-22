@@ -1,16 +1,15 @@
 package app.evee.patches.gboard.memesearch
 
 import app.morphe.patcher.Fingerprint
-import app.morphe.patcher.literal
-import app.morphe.patcher.opcode
-import com.android.tools.smali.dexlib2.Opcode
 
-object EmoticonCorpusFingerprint : Fingerprint(
-    name = "<clinit>",
-    returnType = "V",
-    filters = listOf(
-        literal(0x7f140478),
-        literal(0x7f080536),
-        opcode(Opcode.CONST_CLASS)
+object EmoticonNavbarFingerprint : Fingerprint(
+    definingClass = "Lizq;",
+    name = "a",
+    returnType = "Lvow;",
+    parameters = listOf(
+        "Landroid/content/Context;",
+        "Lpqu;",
+        "Landroid/view/inputmethod/EditorInfo;",
+        "Z"
     )
 )

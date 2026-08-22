@@ -4,9 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
+import java.lang.reflect.Method;
 
 @SuppressWarnings("unused")
 public class GboardSettings {
@@ -70,23 +70,44 @@ public class GboardSettings {
     }
 
     public static void addMorphePreferenceCategory(Object fragmentObj) {
+        if (fragmentObj == null) return;
         try {
-            if (!(fragmentObj instanceof PreferenceFragmentCompat)) {
-                return;
-            }
-            PreferenceFragmentCompat fragment = (PreferenceFragmentCompat) fragmentObj;
-            PreferenceScreen screen = fragment.getPreferenceScreen();
-            if (screen == null) {
-                return;
-            }
-            Context context = fragment.getContext();
-            if (context == null) {
-                context = fragment.getActivity();
-            }
-            if (context == null) {
-                return;
+            Class<?> clazz = fragmentObj.getClass();
+
+            // Invoke n() or getPreferenceScreen() to retrieve PreferenceScreen
+            PreferenceScreen screen = null;
+            try {
+                Method nMethod = clazz.getMethod("n");
+                screen = (PreferenceScreen) nMethod.invoke(fragmentObj);
+            } catch (Throwable t) {
+                for (Method m : clazz.getMethods()) {
+                    if (m.getParameterTypes().length == 0 && PreferenceScreen.class.isAssignableFrom(m.getReturnType())) {
+                        screen = (PreferenceScreen) m.invoke(fragmentObj);
+                        break;
+                    }
+                }
             }
 
+            if (screen == null) return;
+
+            // Get Context
+            Context context = null;
+            try {
+                Method xMethod = clazz.getMethod("x");
+                context = (Context) xMethod.invoke(fragmentObj);
+            } catch (Throwable ignored) {}
+            if (context == null) {
+                try {
+                    Method eMethod = clazz.getMethod("E");
+                    context = (Context) eMethod.invoke(fragmentObj);
+                } catch (Throwable ignored) {}
+            }
+            if (context == null) {
+                context = getAppContext();
+            }
+            if (context == null) return;
+
+            // Check if already added
             if (screen.findPreference("morphe_settings_category") != null) {
                 return;
             }
@@ -94,6 +115,7 @@ public class GboardSettings {
             PreferenceCategory category = new PreferenceCategory(context);
             category.setKey("morphe_settings_category");
             category.setTitle("Morphe Settings");
+            category.setOrder(Integer.MAX_VALUE);
             screen.addPreference(category);
 
             SwitchPreferenceCompat safeSearchPref = new SwitchPreferenceCompat(context);
@@ -119,6 +141,7 @@ public class GboardSettings {
                 return true;
             });
             category.addPreference(memeSearchPref);
+
         } catch (Throwable ignored) {
         }
     }

@@ -1,6 +1,6 @@
 package app.evee.patches.gboard.memesearch
 
-import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.morphe.patcher.extensions.InstructionExtensions.replaceInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import app.evee.patches.gboard.shared.Constants.COMPATIBILITY_GBOARD
 
@@ -13,12 +13,15 @@ val memeSearchPatch = bytecodePatch(
     compatibleWith(COMPATIBILITY_GBOARD)
 
     execute {
-        val constClassIndex = EmoticonCorpusFingerprint.instructionMatches[2].index
-
-        EmoticonCorpusFingerprint.method.replaceInstruction(
-            constClassIndex,
+        EmoticonNavbarFingerprint.method.replaceInstructions(
+            0,
             """
-                const-class v1, Lcom/google/android/apps/inputmethod/libs/expression/extension/IGifKeyboardExtension;
+                new-instance v0, Ljjc;
+                const/4 v1, 0x1
+                invoke-direct {v0, v1}, Ljjc;-><init>(I)V
+                invoke-virtual {v0, p1, p2, p3, p4}, Ljjc;->a(Landroid/content/Context;Lpqu;Landroid/view/inputmethod/EditorInfo;Z)Lvow;
+                move-result-object p0
+                return-object p0
             """
         )
     }
