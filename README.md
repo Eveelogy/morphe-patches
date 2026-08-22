@@ -15,7 +15,7 @@ Or you can go to the Patches sources section in the Morphe app and add the GitHu
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.1](https://github.com/Eveelogy/morphe-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
+> **[v1.0.0-dev.2](https://github.com/Eveelogy/morphe-patches/releases/tag/v1.0.0-dev.2)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
 <details open>
 <summary>📦 Gboard&nbsp;&nbsp;•&nbsp;&nbsp;3 patches</summary>
 <br>
@@ -27,8 +27,8 @@ Or you can go to the Patches sources section in the Morphe app and add the GitHu
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Clone Gboard](#clone-gboard) | Allows Gboard to be installed alongside the official app. | • Cloned package name |
 | [Disable GIF SafeSearch](#disable-gif-safesearch) | Disables content filtering on Tenor GIF search. |  |
+| [Rename Gboard](#rename-gboard) | Changes the display name of Gboard in the keyboard switcher and settings. | • Keyboard name |
 | [Replace emoticons with meme search](#replace-emoticons-with-meme-search) | Replaces the emoticon keyboard tab with a meme and static image search panel. |  |
 
 </details>

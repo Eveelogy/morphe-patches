@@ -1,3 +1,9 @@
+## [1.0.0-dev.2](https://github.com/Eveelogy/morphe-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-08-22)
+
+### ✨ New Features
+
+* add rename patch and fix safe search and emoticon routing ([cd42c0e](https://github.com/Eveelogy/morphe-patches/commit/cd42c0e98399d72ffb15e75ab454d6f8a15ae09c))
+
 ## 1.0.0-dev.1 (2026-08-22)
 
 ### ✨ New Features
